@@ -10,7 +10,6 @@ class SelfOrganizingMap:
     def __init__(self,nbNeurons,ndim,type='line',tf=1000.):
         self.type = type
         self.n = nbNeurons
-        self.G = zeros((nbNeurons,1))
         self.W = zeros((nbNeurons,1))
         self.ref = 0.01*random.rand(nbNeurons,ndim)
         self.t = 1
