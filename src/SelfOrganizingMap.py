@@ -4,7 +4,7 @@ Created on August 27, 2011
 @author: Arnaud Rachez
 '''
 from numpy import *
-#from pylab import *
+from pylab import *
 
 class SelfOrganizingMap:
     def __init__(self,nbNeurons,ndim,type='line',tf=1000.):
