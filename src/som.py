@@ -3,15 +3,15 @@ Created on August 27, 2011
 
 @author: Arnaud Rachez
 '''
-from numpy import *
-from pylab import *
+from numpy import zeros, linalg, c_, exp, sqrt, dot, ones, random
+from pylab import plot, ion, draw, clf
 
 class SelfOrganizingMap:
     def __init__(self,nbNeurons,ndim,type='line',tf=1000.):
         self.type = type
         self.n = nbNeurons
         self.W = zeros((nbNeurons,1))
-        self.ref = 0.01*rand(nbNeurons,ndim)
+        self.ref = 0.01*random.rand(nbNeurons,ndim)
         self.t = 1
         self.tf = float(tf)
         
@@ -53,8 +53,8 @@ class SelfOrganizingMap:
                 plot(rx,ry,'b')
         
 if __name__ == '__main__':
-    print "plop"
-    distrib = [1*(1-2*rand(2,1)) for i in range(0,5000)]
+    
+    distrib = [1*(1-2*random.rand(2,1)) for i in range(0,5000)]
     som = SelfOrganizingMap(20*20,2,type='grid',tf=len(distrib))
     
     ion()
