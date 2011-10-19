@@ -3,7 +3,7 @@
 Each File Comes with a small example of implementation or can be easily used for custom tasks.
 
 ## Feed Forward Network
-The example learn the XOR function.
+The example learns the XOR function.
 
 ## Self Organizing Map
 The example  learns a simple square distribution.
